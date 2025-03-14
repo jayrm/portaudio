@@ -62,9 +62,13 @@ of a device for the duration of active stream using those devices
 #define PA_LOGL_
 
 #ifdef __GNUC__
+#if !defined(_WIN32_WINNT) || !defined(WINVER) || (_WIN32_WINNT<0x0501)
 #include <initguid.h>
+#undef _WIN32_WINNT
 #define _WIN32_WINNT 0x0501
+#undef WINVER
 #define WINVER 0x0501
+#endif
 #endif
 
 #include <string.h> /* strlen() */
