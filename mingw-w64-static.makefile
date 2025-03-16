@@ -49,8 +49,8 @@ CFLAGS += -fno-strict-aliasing -frounding-math -fno-math-errno -fwrapv -fno-exce
 
 # portaudio APIs / options to include in the library
 # CFLAGS += -DPA_USE_ASIO=1
-# CFLAGS += -DPA_USE_DS=1
-# CFLAGS += -DPA_USE_WMME=1
+CFLAGS += -DPA_USE_DS=1
+CFLAGS += -DPA_USE_WMME=1
 CFLAGS += -DPA_USE_WASAPI=1
 CFLAGS += -DPA_USE_WDMKS=1
 # CFLAGS += -DPA_USE_SKELETON=1
